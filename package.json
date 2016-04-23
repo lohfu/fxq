@@ -2,10 +2,20 @@
   "name": "fxq",
   "version": "0.0.1",
   "description": "",
+  "author": "Linus Miller <lohfu@lohfu.io> (https://lohfu.io/)",
+  "license": "MIT",
   "main": "./fxq.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf *.js",
+    "lint": "eslint src",
+    "build": "babel src --out-dir .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run clean && npm run build"
   },
-  "author": "Linus Miller <lohfu@lohfu.io> (https://lohfu.io/)",
-  "license": "MIT"
+  "devDependencies": {
+    "babel-cli": "^6.7.7",
+    "eslint": "^2.8.0",
+    "eslint-plugin-import": "^1.5.0",
+    "rimraf": "^2.5.2"
+  }
 }
