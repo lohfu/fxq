@@ -1,5 +1,3 @@
-'use strict';
-
 // Copied from jQuery 2.2.1 (i think) 2016-03-05. And then simplified.
 
 const queues = new Map(),

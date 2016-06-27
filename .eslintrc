@@ -1,10 +1,6 @@
 {
 	"extends": "airbnb-base",
 
-	"parserOptions": {
-		"sourceType": "strict"
-	},
-
 	"rules": {
     "no-underscore-dangle": 0,
 		"default-case": 0,
