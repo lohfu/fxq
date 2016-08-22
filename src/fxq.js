@@ -1,4 +1,3 @@
-import isArray from 'is-array';
 // Copied from jQuery 2.2.1 (i think) 2016-03-05. And then simplified.
 
 const queues = new Map(),
@@ -24,9 +23,9 @@ module.exports = {
 
       // Speed up dequeue by getting out quickly if this is just a lookup
       if (data) {
-        if (!queue || isArray(data)) {
+        if (!queue || Array.isArray(data)) {
           // TODO better makeArray
-          queue = isArray(data) ? data : [ data ];
+          queue = Array.isArray(data) ? data : [ data ];
           queues.set(elem, queue);
         } else {
           queue.push(data);
