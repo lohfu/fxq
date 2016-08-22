@@ -51,8 +51,8 @@ module.exports = {
         this.dequeue(elem);
       };
 
-    let fn = queue.shift(),
-      startLength = queue.length;
+    let startLength = queue.length,
+      fn = queue.shift();
 
     // If the fx queue is dequeued, always remove the progress sentinel
     if (fn === 'inprogress') {
